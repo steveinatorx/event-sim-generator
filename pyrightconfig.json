@@ -1,0 +1,27 @@
+{
+  "include": [
+    "src",
+    "tests"
+  ],
+  "exclude": [
+    "**/__pycache__",
+    "**/node_modules",
+    "out"
+  ],
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+  "reportUnusedImport": true,
+  "reportUnusedVariable": true,
+  "reportUnusedClass": true,
+  "reportUnusedFunction": true,
+  "reportDuplicateImport": true,
+  "reportOptionalSubscript": true,
+  "reportOptionalMemberAccess": true,
+  "reportOptionalCall": true,
+  "reportOptionalIterable": true,
+  "reportOptionalContextManager": true,
+  "reportOptionalOperand": true,
+  "reportGeneralTypeIssues": true,
+  "pythonVersion": "3.11",
+  "typeCheckingMode": "basic"
+}
