@@ -1,4 +1,4 @@
-"""Tests for event-sim.py"""
+"""Tests for event_sim.py"""
 
 import importlib.util
 import json
@@ -13,7 +13,7 @@ import pytest
 # Need to register in sys.modules before execution for dataclasses to work
 spec = importlib.util.spec_from_file_location(
     "event_sim",
-    Path(__file__).parent.parent / "src" / "event-sim.py"
+    Path(__file__).parent.parent / "src" / "event_sim.py"
 )
 event_sim = importlib.util.module_from_spec(spec)
 sys.modules["event_sim"] = event_sim  # Register before execution
