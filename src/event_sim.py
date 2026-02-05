@@ -214,11 +214,11 @@ def simulate_order_events(cfg: SimConfig) -> List[Dict[str, Any]]:
         business_events: List[Tuple[str, int, datetime, Dict[str, Any]]] = []
         business_events.append(("order_created", schema_version, order_created_time, payload_created))
         business_events.append(("payment_authorized", 1, payment_time, payload_payment))
-        if payload_correct is not None:
+        if payload_correct is not None and correction_time is not None:
             business_events.append(("order_amount_corrected", 1, correction_time, payload_correct))
-        if cancelled and payload_cancel is not None:
+        if cancelled and payload_cancel is not None and cancel_time is not None:
             business_events.append(("order_cancelled", 1, cancel_time, payload_cancel))
-        if shipped and payload_shipped is not None:
+        if shipped and payload_shipped is not None and ship_time is not None:
             business_events.append(("order_shipped", 1, ship_time, payload_shipped))
 
         business_events.sort(key=lambda x: x[2])
